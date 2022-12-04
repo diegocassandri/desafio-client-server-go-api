@@ -24,14 +24,14 @@ O endpoint necessário gerado pelo server.go para este desafio será: /cotacao e
 
 ## Requisitos
 
-- [ ] Implementar o servidor
-  - [ ] Endpoint para consumir a API contendo o câmbio de Dólar e Real no endereço: <https://economia.awesomeapi.com.br/json/last/USD-BRL> e em seguida deverá retornar no formato JSON o resultado para o cliente.
-  - [ ] Gravar dados no Sqllite
-  - [ ] Usando contexto o timeout máximo para chamar a API de cotação do dólar deverá ser de 200ms e o timeout máximo para conseguir persistir os dados no banco deverá ser de 10ms.
-  - [ ] O servidor deve responder no endpoint / cotacao e na porta HTTP:8080
+- [x] Implementar o servidor
+  - [x] Endpoint para consumir a API contendo o câmbio de Dólar e Real no endereço: <https://economia.awesomeapi.com.br/json/last/USD-BRL> e em seguida deverá retornar no formato JSON o resultado para o cliente.
+  - [x] Gravar dados no Sqllite
+  - [x] Usando contexto o timeout máximo para chamar a API de cotação do dólar deverá ser de 200ms e o timeout máximo para conseguir persistir os dados no banco deverá ser de 10ms.
+  - [x] O servidor deve responder no endpoint / cotacao e na porta HTTP:8080
 
-- [ ] Implementar o cliente
-  - [ ] Deve realizar uma requisição HTTP no server.go solicitando a cotação do dólar.
-  - [ ] Deve receber apenas o valor do câmbio "bid".
-  - [ ] Utilizando context o cliente deve ter um timeout máximo de 300ms para receber a resposta.
-  - [ ] O cliente deve salvar a cotação em um arquivo "cotacao.txt" no formato: Dólar: {valor}.
+- [x] Implementar o cliente
+  - [x] Deve realizar uma requisição HTTP no server.go solicitando a cotação do dólar.
+  - [x] Deve receber apenas o valor do câmbio "bid".
+  - [x] Utilizando context o cliente deve ter um timeout máximo de 300ms para receber a resposta.
+  - [x] O cliente deve salvar a cotação em um arquivo "cotacao.txt" no formato: Dólar: {valor}.
