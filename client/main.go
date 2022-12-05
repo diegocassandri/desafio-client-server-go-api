@@ -12,7 +12,17 @@ import (
 
 type Cotacao struct {
 	Usdbrl struct {
-		Bid string `json:"bid"`
+		Code       string `json:"-"`
+		Codein     string `json:"-"`
+		Name       string `json:"-"`
+		High       string `json:"-"`
+		Low        string `json:"-"`
+		VarBid     string `json:"-"`
+		PctChange  string `json:"-"`
+		Bid        string `json:"bid"`
+		Ask        string `json:"-"`
+		Timestamp  string `json:"-"`
+		CreateDate string `json:"-"`
 	} `json:"USDBRL"`
 }
 
@@ -29,7 +39,7 @@ func main() {
 }
 
 func buscaCotacao() (cotacao *Cotacao, err error) {
-	ctx, cancel := context.WithTimeout(context.Background(), 300*time.Millisecond) //timeout para buscar cotação do servidor
+	ctx, cancel := context.WithTimeout(context.Background(), 300*time.Minute) //timeout para buscar cotação do servidor
 	defer cancel()
 	req, err := http.NewRequestWithContext(ctx, "GET", "http://localhost:8080/cotacao", nil)
 	if err != nil {

@@ -32,7 +32,7 @@ type Cotacao struct {
 var db *sql.DB
 
 func main() {
-	dbs, err := sql.Open("sqlite3", "./cotacoes.db")
+	dbs, err := sql.Open("sqlite3", "cotacoes.db")
 	if err != nil {
 		panic(err)
 	}
