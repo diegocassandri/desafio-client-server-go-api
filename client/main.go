@@ -49,6 +49,7 @@ func buscaCotacao() (cotacao *Cotacao, err error) {
 	if err != nil {
 		return nil, err
 	}
+
 	defer res.Body.Close()
 
 	body, error := ioutil.ReadAll(res.Body)
